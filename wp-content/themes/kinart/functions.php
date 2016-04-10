@@ -7,6 +7,9 @@
  * @package kinart
  */
 
+require get_template_directory() . '/inc/actions.php';
+require get_template_directory() . '/inc/filters.php';
+
 if ( ! function_exists( 'kinart_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
