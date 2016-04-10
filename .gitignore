@@ -22,3 +22,4 @@ Vagrantfile
 
 node_modules
 ftp.json
+tags*
