@@ -1,7 +1,7 @@
 {
     "meta": {
-        "build": 1460270090,
-        "version": "2.6.2"
+        "build": 1471677207,
+        "version": "2.6.7"
     },
     "pods": {
         "15": {
@@ -100,44 +100,11 @@
             "supports_trackbacks": "0",
             "type": "post_type"
         },
-        "8": {
-            "alias": "",
-            "built_in_post_types_attachment": "0",
-            "built_in_post_types_colourpair": "0",
-            "built_in_post_types_page": "0",
-            "built_in_post_types_post": "0",
-            "built_in_post_types_project": "0",
-            "description": "",
-            "fields": [],
-            "hierarchical": "0",
-            "id": 8,
-            "label": "Project types",
-            "label_singular": "Project type",
-            "menu_location": "default",
-            "menu_position": "0",
-            "name": "projecttype",
-            "object": "",
-            "public": "1",
-            "query_var": "0",
-            "rewrite": "1",
-            "rewrite_hierarchical": "1",
-            "rewrite_with_front": "1",
-            "show_admin_column": "0",
-            "show_in_menu": 1,
-            "show_in_nav_menus": "1",
-            "show_tagcloud": "1",
-            "show_ui": "1",
-            "sort": "0",
-            "storage": "meta",
-            "type": "taxonomy"
-        },
         "9": {
             "alias": "",
-            "built_in_taxonomies_category": "0",
-            "built_in_taxonomies_colourpair": "0",
+            "built_in_taxonomies_category": "1",
             "built_in_taxonomies_link_category": "0",
             "built_in_taxonomies_post_tag": "0",
-            "built_in_taxonomies_projecttype": "0",
             "can_export": "1",
             "capability_type": "post",
             "capability_type_custom": "project",
@@ -184,7 +151,7 @@
                 "overlay_background_colour": {
                     "admin_only": "0",
                     "class": "",
-                    "color_repeatable": 0,
+                    "color_repeatable": "0",
                     "description": "",
                     "help": "",
                     "hidden": "0",
@@ -202,12 +169,13 @@
                     ],
                     "sister_id": "",
                     "type": "color",
+                    "unique": "0",
                     "weight": 1
                 },
                 "overlay_text_colour": {
                     "admin_only": "0",
                     "class": "",
-                    "color_repeatable": 0,
+                    "color_repeatable": "0",
                     "description": "",
                     "help": "",
                     "hidden": "0",
@@ -225,6 +193,7 @@
                     ],
                     "sister_id": "",
                     "type": "color",
+                    "unique": "0",
                     "weight": 2
                 }
             },
