@@ -27,7 +27,10 @@
 	<header id="masthead" class="site-header" role="banner">
 
 		<p class="site-branding">
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+				<span class="site-branding__name"><?php bloginfo( 'name' ); ?></span>
+				<img class="site-branding__logo" src="http://placehold.it/170x180">
+			</a>
 		</p><!-- .site-branding -->
 
 	</header><!-- #masthead -->
