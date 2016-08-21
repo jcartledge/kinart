@@ -1,21 +1,7 @@
 @import "style";
 
-$fullWidth: 1080px;
+@import "base/variables";
+@import "mixins/responsive";
 
-h2 {
-	margin-top: 1.5em;
-	margin-bottom: 0.5em;
-}
-
-.site {
-	max-width: $fullWidth;
-	width: 100%;
-	margin: auto;
-}
-
-.site-header {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	width: 100%;
+@include breakpoint($lg) {
 }
