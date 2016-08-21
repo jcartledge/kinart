@@ -23,3 +23,4 @@ Vagrantfile
 node_modules
 ftp.json
 build
+wp-content/themes/kinart/style.css
