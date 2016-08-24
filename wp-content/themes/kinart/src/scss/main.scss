@@ -1,8 +1,27 @@
-@import "style";
-
+/**
+ * Base
+ */
+@import "base/wp-normalise";
 @import "base/variables";
+
+/**
+ * Mixins
+ */
 @import "mixins/responsive";
 
+/**
+ * Layouts
+ */
 @import "layouts/site";
 
+/**
+ * Components (BEM blocks).
+ */
+@import "components/menu-icon";
 @import "components/site-branding";
+@import "components/site-header";
+
+/**
+ * Overrides
+ */
+@import "overrides/home";

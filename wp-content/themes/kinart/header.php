@@ -26,6 +26,8 @@
 
 	<header id="masthead" class="site-header" role="banner">
 
+		<p class="menu-icon"></p>
+
 		<p class="site-branding">
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 				<span class="site-branding__name"><?php bloginfo( 'name' ); ?></span>
