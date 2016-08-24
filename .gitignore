@@ -24,4 +24,5 @@ node_modules
 ftp.json
 build
 wp-content/themes/kinart/style.css
+wp-content/themes/kinart/bundle.js
 _backups

@@ -8,3 +8,7 @@ add_action('manage_colourpair_posts_custom_column', function ($column_name, $pos
 		echo sprintf('<div style="width: 0px; height: 0px; border-style:solid;  margin-top: -50px; border-width: 50px 200px 0 0; border-color: %s transparent transparent transparent;"></div>', $foreground);
 	}
 }, 10, 2);
+
+add_action( 'wp_enqueue_scripts', function () {
+	wp_enqueue_script( 'bundle', '/wp-content/themes/kinart/bundle.js', false );
+} );
