@@ -9,4 +9,5 @@ for i in "#FFCCCC","#1D609C" "#FFCCE6","#0099CC" "#FF80AA","#FFCCCC" "#CC0000","
 	post_id=$(wp post create --post_type=colourpair --porcelain)
 	wp post meta set "$post_id" foreground_colour "$1"
 	wp post meta set $post_id background_colour $2
+	wp post update $post_id --post_status=publish
 done
