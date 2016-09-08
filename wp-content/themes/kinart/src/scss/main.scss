@@ -1,27 +1,28 @@
 /**
  * Base
  */
-@import "base/wp-normalise";
-@import "base/variables";
+@import 'base/wp-normalise';
+@import 'base/variables';
 
 /**
  * Mixins
  */
-@import "mixins/responsive";
+@import 'mixins/responsive';
 
 /**
  * Layouts
  */
-@import "layouts/site";
+@import 'layouts/site';
 
 /**
  * Components (BEM blocks).
  */
-@import "components/menu-icon";
-@import "components/site-branding";
-@import "components/site-header";
+@import 'components/menu-icon';
+@import 'components/site-branding';
+@import 'components/site-header';
+@import 'components/front-page-colours';
 
 /**
  * Overrides
  */
-@import "overrides/home";
+@import 'overrides/home';
