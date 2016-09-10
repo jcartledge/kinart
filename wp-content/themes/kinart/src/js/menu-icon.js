@@ -1,24 +1,19 @@
+import on from 'event-listener';
 import once from 'once-event-listener';
 
-const domReady = document.addEventListener.bind(document, 'DOMContentLoaded');
-
-domReady((e) => {
-  const $ = document.querySelector.bind(document);
-  const menu_icon = $('.menu-icon');
-  const menu = $('.menu');
-  const front_page_colours = $('.front-page-colours');
-  if (menu_icon) {
-    menu_icon.addEventListener('click', e => {
-      menu_icon.classList.toggle('menu-icon--open');
-
-      if (front_page_colours.classList.contains('front-page-colours--open')) {
-        front_page_colours.classList.remove('front-page-colours--back');
+on(document, 'DOMContentLoaded', _ => {
+  const menuIcon = document.querySelector('.menu-icon');
+  const curtain = document.querySelector('.curtain');
+  on(menuIcon, 'click', _ => {
+    menuIcon.classList.toggle('menu-icon--open');
+    if (curtain) {
+      let curtainClasses = curtain.classList;
+      if (curtainClasses.contains('curtain--open')) {
+        curtainClasses.remove('curtain--behind');
       } else {
-        once(front_page_colours, 'animationend', e => {
-          front_page_colours.classList.add('front-page-colours--back');
-        });
+        once(curtain, 'animationend', _ => curtainClasses.add('curtain--behind'));
       }
-      front_page_colours.classList.toggle('front-page-colours--open');
-    });
-  }
+      curtainClasses.toggle('curtain--open');
+    }
+  });
 });

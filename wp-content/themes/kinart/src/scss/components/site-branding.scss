@@ -1,7 +1,9 @@
-.site-branding {
+@import 'mixins/bem';
+
+@include block(site-branding) {
 	float: left;
 	margin-left: 1em;
-	&__name {
+	@include element(name) {
 		display: none;
 	}
 }

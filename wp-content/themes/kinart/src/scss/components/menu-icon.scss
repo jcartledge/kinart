@@ -1,4 +1,6 @@
-.menu-icon {
+@import 'mixins/bem';
+
+@include block(menu-icon) {
 	float: right;
 	position: relative;
 	margin-right: 1em;
@@ -29,7 +31,7 @@
 			0 1em 0 0 black;
 	}
 
-	&--open {
+	@include modifier(open) {
 		transform: rotate(-90deg);
 	}
 }
