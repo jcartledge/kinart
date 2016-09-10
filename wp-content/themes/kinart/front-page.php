@@ -12,8 +12,7 @@
  * @package kinart
  */
 
-include 'template-parts/front-page-colours.php';
-get_header();
+get_header('front');
 get_sidebar();
 ?>
 	<div id="primary" class="content-area">

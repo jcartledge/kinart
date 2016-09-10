@@ -22,6 +22,15 @@
 		animation-iteration-count: 1;
 		animation-timing-function: ease-in-out;
 		animation-duration: 0.8s;
+		animation-fill-mode: forwards;
+	}
+	&--open {
+		.front-page-colours__foreground {
+			animation-name: slideOutToLeft;
+		}
+		.front-page-colours__background {
+			animation-name: slideOutToRight;
+		}
 	}
 }
 
@@ -30,7 +39,18 @@
 	100% { left: 0; }
 }
 
+@keyframes slideOutToRight {
+	0% { left: 0; }
+	100% { left: 120%; }
+
+}
+
 @keyframes slideInFromLeft {
 	0% { right: 120%; }
 	100% { right: 0; }
+}
+
+@keyframes slideOutToLeft {
+	0% { right: 0; }
+	100% { right: 120%; }
 }
