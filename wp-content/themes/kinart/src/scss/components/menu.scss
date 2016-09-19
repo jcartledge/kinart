@@ -23,6 +23,10 @@
 	a {
 		@extend .menu__link;
 	}
+	ul {
+		list-style-type: none;
+		margin-left: 0;
+	}
 	.current-menu-item a {
 		@extend .menu__link--active;
 	}
