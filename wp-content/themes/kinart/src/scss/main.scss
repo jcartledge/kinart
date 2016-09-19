@@ -14,15 +14,17 @@
  */
 @import 'layouts/site';
 @import 'layouts/front';
+@import 'layouts/category';
 
 /**
  * Components (BEM blocks).
  */
+@import 'components/category-title';
+@import 'components/curtain';
+@import 'components/menu';
 @import 'components/menu-icon';
 @import 'components/site-branding';
 @import 'components/site-header';
-@import 'components/curtain';
-@import 'components/menu';
 
 /**
  * Overrides

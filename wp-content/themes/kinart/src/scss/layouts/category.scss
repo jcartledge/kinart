@@ -1,0 +1,31 @@
+.category {
+	.page-header {
+		margin-top: 2em;
+		margin-bottom: 3em;
+	}
+	.site-content {
+		position: relative;
+	}
+	.content-area {
+		position: absolute;
+		left: 0;
+		&.is-out {
+			left: 200px;
+		}
+	}
+	.widget-area {
+		position: absolute;
+		top: 0;
+		left: -200px;
+		opacity: 0;
+		&.is-in {
+			left: 0;
+			opacity: 1;
+		}
+	}
+	.content-area, .widget-area {
+		transition-property: left, opacity;
+		transition-duration: 0.4s;
+		transition-timing-function: ease-in-out;
+	}
+}

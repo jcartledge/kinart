@@ -1,13 +1,29 @@
-.menu {
+@import 'mixins/bem';
+
+@include block(menu) {
 	padding: 0;
-	margin: 1em;
+	margin: 0;
 	list-style-type: none;
-	left: 120%;
-	a {
+	@include element(link) {
+		display: inline;
+		margin: 1em;
+		font-size: 1em;
 		color: black;
+		font-weight: 300;
 		text-decoration: none;
+		@include modifier(active) {
+			font-weight: 500;
+		}
 		&:hover {
+			cursor: pointer;
 			background-color: yellow;
 		}
+	}
+
+	a {
+		@extend .menu__link;
+	}
+	.current-menu-item a {
+		@extend .menu__link--active;
 	}
 }
