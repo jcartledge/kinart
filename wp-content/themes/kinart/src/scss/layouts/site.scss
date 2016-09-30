@@ -5,13 +5,28 @@
    * Responsive layout, centred.
    */
   margin: auto;
+  .sidebar {
+    display: none;
+  }
   @include breakpoint($sm) {
     max-width: $screen-sm-min;
   }
   @include breakpoint($md) {
     max-width: $screen-md-min;
+    .sidebar {
+      display: block;
+    }
   }
   @include breakpoint($lg) {
     max-width: $screen-lg-min;
+  }
+  .site-content {
+    display: flex;
+  }
+  .sidebar {
+    flex: 1;
+  }
+  .content-area {
+    flex: 3;
   }
 }

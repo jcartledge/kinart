@@ -30,4 +30,7 @@
   .current-menu-item a {
     @extend .menu__link--active;
   }
+  .children {
+    padding-left: 1em;
+  }
 }

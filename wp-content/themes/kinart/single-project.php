@@ -3,9 +3,11 @@
  * @package kinart
  */
 
-get_header();
-get_sidebar();
-?>
+get_header(); ?>
+
+<div class="sidebar">
+  <?php get_sidebar( 'project' ); ?>
+</div>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
@@ -14,6 +16,7 @@ get_sidebar();
 			while ( have_posts() ) : the_post();
 
 				get_template_part( 'template-parts/content', 'page' );
+				get_template_part( 'template-parts/carousel' );
 
 			endwhile; // End of the loop.
 			?>
@@ -22,5 +25,4 @@ get_sidebar();
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();

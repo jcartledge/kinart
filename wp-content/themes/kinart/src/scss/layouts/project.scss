@@ -1,0 +1,10 @@
+@import 'mixins/accessibility';
+
+article.project {
+  header {
+    @include accessibility;
+  }
+  .entry-content {
+    margin-top: 0;
+  }
+}

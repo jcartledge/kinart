@@ -123,11 +123,17 @@ function kinart_scripts() {
 
 	wp_enqueue_script( 'kinart-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
 }
 add_action( 'wp_enqueue_scripts', 'kinart_scripts' );
+
+
+/**
+ * Add Swiper CDN files for carousel.
+ */
+add_action( 'wp_enqueue_scripts', function () {
+	wp_enqueue_style('swiper', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css');
+	wp_enqueue_script('swiper', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.min.js');
+} );
 
 /**
  * Implement the Custom Header feature.
