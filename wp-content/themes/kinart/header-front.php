@@ -32,7 +32,7 @@
 		<p class="site-branding">
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 				<span class="site-branding__name"><?php bloginfo( 'name' ); ?></span>
-				<img class="site-branding__logo" src="http://placehold.it/170x180">
+				<img class="site-branding__logo" src="<?php bloginfo('template_url'); ?>/logo.png">
 			</a>
 		</p><!-- .site-branding -->
 
