@@ -2,33 +2,33 @@
 @import 'mixins/animations';
 
 @include block(curtain) {
-	position: absolute;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	z-index: -1;
-	overflow: hidden;
-	@include element(foreground) {
-		width: 100%;
-		height: 100%;
-		@include slide(inFromLeft);
-	}
-	@include element(background) {
-		width: 3000px;
-		height: 2000px;
-		bottom: 0;
-		z-index: 1;
-		@include slide(inFromRight);
-	}
-	@include modifier(open) {
-		@include element(foreground) {
-			@include slide(outToLeft);
-		}
-		@include element(background) {
-			@include slide(outToRight);
-		}
-	}
-	@include modifier(behind) {
-		z-index: -10;
-	}
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  @include element(foreground) {
+    width: 100%;
+    height: 100%;
+    @include slide(inFromLeft);
+  }
+  @include element(background) {
+    width: 3000px;
+    height: 2000px;
+    bottom: 0;
+    z-index: 1;
+    @include slide(inFromRight);
+  }
+  @include modifier(open) {
+    @include element(foreground) {
+      @include slide(outToLeft);
+    }
+    @include element(background) {
+      @include slide(outToRight);
+    }
+  }
+  @include modifier(behind) {
+    z-index: -10;
+  }
 }

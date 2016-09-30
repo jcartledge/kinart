@@ -1,15 +1,17 @@
+@import 'mixins/responsive';
+
 .site {
-	/**
-	 * Responsive layout, centred.
-	 */
-	margin: auto;
-	@include breakpoint($sm) {
-		max-width: $screen-sm-min;
-	}
-	@include breakpoint($md) {
-		max-width: $screen-md-min;
-	}
-	@include breakpoint($lg) {
-		max-width: $screen-lg-min;
-	}
+  /**
+   * Responsive layout, centred.
+   */
+  margin: auto;
+  @include breakpoint($sm) {
+    max-width: $screen-sm-min;
+  }
+  @include breakpoint($md) {
+    max-width: $screen-md-min;
+  }
+  @include breakpoint($lg) {
+    max-width: $screen-lg-min;
+  }
 }

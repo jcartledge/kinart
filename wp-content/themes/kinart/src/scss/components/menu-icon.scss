@@ -1,37 +1,37 @@
 @import 'mixins/bem';
 
 @include block(menu-icon) {
-	float: right;
-	position: relative;
-	margin-right: 1em;
-	top: 1em;
+  float: right;
+  position: relative;
+  margin-right: 1em;
+  top: 1em;
 
-	width: 2em;
-	height: 2em;
-	cursor: pointer;
-	transform-origin: middle right;
-	transition: transform 0.3s;
+  width: 2em;
+  height: 2em;
+  cursor: pointer;
+  transform-origin: middle right;
+  transition: transform 0.3s;
 
-	&:hover {
-		&:before {
-			opacity: 0.5;
-		}
-	}
+  &:hover {
+    &:before {
+      opacity: 0.5;
+    }
+  }
 
-	&:before {
-		content: "";
-		position: absolute;
-		left: 0;
-		top: 0.25em;
-		width: 2em;
-		height: 0.15em;
-		background: black;
-		box-shadow:
-			0 0.5em 0 0 black,
-			0 1em 0 0 black;
-	}
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.25em;
+    width: 2em;
+    height: 0.15em;
+    background: black;
+    box-shadow:
+      0 0.5em 0 0 black,
+      0 1em 0 0 black;
+  }
 
-	@include modifier(open) {
-		transform: rotate(-90deg);
-	}
+  @include modifier(open) {
+    transform: rotate(-90deg);
+  }
 }

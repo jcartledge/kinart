@@ -1,33 +1,33 @@
 @import 'mixins/bem';
 
 @include block(menu) {
-	padding: 0;
-	margin: 0;
-	list-style-type: none;
-	@include element(link) {
-		display: inline;
-		margin: 1em;
-		font-size: 1em;
-		color: black;
-		font-weight: 300;
-		text-decoration: none;
-		@include modifier(active) {
-			font-weight: 500;
-		}
-		&:hover {
-			cursor: pointer;
-			background-color: yellow;
-		}
-	}
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  @include element(link) {
+    display: inline;
+    margin: 1em;
+    font-size: 1em;
+    color: black;
+    font-weight: 300;
+    text-decoration: none;
+    @include modifier(active) {
+      font-weight: 500;
+    }
+    &:hover {
+      cursor: pointer;
+      background-color: yellow;
+    }
+  }
 
-	a {
-		@extend .menu__link;
-	}
-	ul {
-		list-style-type: none;
-		margin-left: 0;
-	}
-	.current-menu-item a {
-		@extend .menu__link--active;
-	}
+  a {
+    @extend .menu__link;
+  }
+  ul {
+    list-style-type: none;
+    margin-left: 0;
+  }
+  .current-menu-item a {
+    @extend .menu__link--active;
+  }
 }
