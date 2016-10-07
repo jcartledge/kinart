@@ -20,11 +20,6 @@ $colours = project_colour();
 	</svg>
 	<div class="project__content">
 		<?php the_content(); ?>
-	</div>
-	<div class="project__carousel">
-		<?php get_template_part( 'template-parts/carousel' ); ?>
-	</div>
-	<footer class="project__footer">
 		<?php
 			edit_post_link(
 				sprintf(
@@ -36,5 +31,10 @@ $colours = project_colour();
 				'</span>'
 			);
 		?>
+	</div>
+	<div class="project__carousel">
+		<?php get_template_part( 'template-parts/carousel' ); ?>
+	</div>
+	<footer class="project__footer">
 	</footer>
 </article>

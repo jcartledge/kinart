@@ -4,8 +4,8 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "prebuild:css": "node-sass --include-path=src/scss src/scss/main.scss build/style.css",
-    "build:css": "postcss --use autoprefixer -b 'last 2 versions' < build/style.css | postcss --use cssnano > style.css",
+    "prebuild:css": "node-sass --include-path=src/scss --source-map-embed src/scss/main.scss > style.css",
+    "build:css": "postcss --use autoprefixer --autoprefixer.browsers 'last 2 versions' --use cssnano -o style.css style.css",
     "build:js": "browserify src/js/index.js -o bundle.js -t [ babelify --presets [ es2015 ] ]",
     "build": "npm run build:css && npm run build:js",
     "build:watch": "watch 'npm run build' src/*"

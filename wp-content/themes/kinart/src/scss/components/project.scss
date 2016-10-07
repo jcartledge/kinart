@@ -1,4 +1,6 @@
 @import 'mixins/accessibility';
+@import 'mixins/animations';
+@import 'mixins/bem';
 
 @include block(project) {
   position: relative;
@@ -10,12 +12,16 @@
     height: 450px;
     position: absolute;
     z-index: -1;
+    @include animate(inFromLeft);
   }
 
   @include element(content) {
     padding: 1em;
     padding-top: 0.5em;
-    width: 50%;
+    @include animate(fadeIn);
+    @include breakpoint($sm) {
+      width: 50%;
+    }
   }
   @include element(carousel) {}
   @include element(footer) {}

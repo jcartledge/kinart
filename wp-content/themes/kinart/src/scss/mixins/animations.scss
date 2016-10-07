@@ -1,10 +1,10 @@
-@mixin slide($direction) {
+@mixin animate($animation) {
   position: absolute;
   animation-iteration-count: 1;
   animation-timing-function: ease-in-out;
   animation-duration: 0.8s;
   animation-fill-mode: forwards;
-  animation-name: $direction;
+  animation-name: $animation;
 }
 
 @keyframes inFromRight {
@@ -26,4 +26,9 @@
 @keyframes outToLeft {
   0% { right: 0; }
   100% { right: 120%; }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
