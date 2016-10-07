@@ -9,6 +9,13 @@ add_action('manage_colourpair_posts_custom_column', function ($column_name, $pos
 	}
 }, 10, 2);
 
+add_action('manage_colour_posts_custom_column', function ($column_name, $post_id) {
+	if($column_name == 'colour') {
+		$colour = current(get_post_custom_values('colour', $post_id));
+		echo sprintf('<div style="width: 200px; height: 50px; background-color: %s;"></div>', $colour);
+	}
+}, 10, 2);
+
 add_action( 'wp_enqueue_scripts', function () {
 	wp_enqueue_script( 'bundle', '/wp-content/themes/kinart/bundle.js', false );
 } );

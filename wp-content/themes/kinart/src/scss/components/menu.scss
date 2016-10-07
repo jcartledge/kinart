@@ -27,7 +27,8 @@
     list-style-type: none;
     margin-left: 0;
   }
-  .current-menu-item a {
+  .current-menu-item a,
+  .current_page_item a {
     @extend .menu__link--active;
   }
   .children {

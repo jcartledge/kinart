@@ -13,7 +13,7 @@ $slides = get_attached_media( 'image' );
 		<!-- Slides -->
 		<?php foreach ( $slides as $slide ) : ?>
 			<div class="swiper-slide">
-				<img src="<?php echo wp_get_attachment_image_url( $slide->ID, 'full' ); ?>" />
+				<?php echo wp_get_attachment_image( $slide->ID, 'carousel' ); ?>
 			</div>
 		<?php endforeach; ?>
 	</div>

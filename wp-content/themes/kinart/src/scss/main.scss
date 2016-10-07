@@ -10,7 +10,6 @@
 @import 'layouts/site';
 @import 'layouts/front';
 @import 'layouts/category';
-@import 'layouts/project';
 
 /**
  * Components (BEM blocks).
@@ -19,6 +18,7 @@
 @import 'components/curtain';
 @import 'components/menu';
 @import 'components/menu-icon';
+@import 'components/project';
 @import 'components/site-branding';
 @import 'components/site-header';
 
