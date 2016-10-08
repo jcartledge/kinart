@@ -6,24 +6,21 @@
 $slides = get_attached_media( 'image' );
 
 ?>
-<!-- Slider main container -->
-<div class="swiper-container">
-	<!-- Additional required wrapper -->
-	<div class="swiper-wrapper">
-		<!-- Slides -->
+<div class="carousel">
+	<div class="carousel__container">
 		<?php foreach ( $slides as $slide ) : ?>
-			<div class="swiper-slide">
-				<?php echo wp_get_attachment_image( $slide->ID, 'carousel' ); ?>
+			<div class="carousel__slide">
+				<?php echo wp_get_attachment_image( $slide->ID, [ 900, 600 ], false, ['class' => 'carousel__image'] ); ?>
 			</div>
 		<?php endforeach; ?>
 	</div>
-	<!-- If we need pagination -->
-	<div class="swiper-pagination"></div>
-
-	<!-- If we need navigation buttons -->
-	<div class="swiper-button-prev"></div>
-	<div class="swiper-button-next"></div>
-
-	<!-- If we need scrollbar -->
-	<div class="swiper-scrollbar"></div>
+	<?php if ( count( $slides ) ) : ?>
+		<div class="carousel__pagination">
+			<span class="carousel__prev">&lsaquo;</span>
+			<span class="carousel__current">1</span>
+			of
+			<span class="carousel__total"><?php echo count($slides); ?></span>
+			<span class="carousel__next">&rsaquo;</span>
+		</div>
+	<?php endif; ?>
 </div>

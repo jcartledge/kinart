@@ -126,15 +126,6 @@ function kinart_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'kinart_scripts' );
 
-
-/**
- * Add Swiper CDN files for carousel.
- */
-add_action( 'wp_enqueue_scripts', function () {
-	wp_enqueue_style('swiper', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css');
-	wp_enqueue_script('swiper', 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.min.js');
-} );
-
 /**
  * Implement the Custom Header feature.
  */

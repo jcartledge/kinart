@@ -11,10 +11,10 @@ $colours = project_colour();
 	<header class="project__title">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header>
-
+	<?php get_template_part( 'template-parts/carousel' ); ?>
 	<svg class="project__background" version="1.1" xmlns="http://www.w3.org/2000/svg">
 		<polygon
-			points="0 0, 1200 0, 0 450"
+			points="0 0, 1200 0, 0 600"
 			stroke="none"
 			fill="<?php echo $colours->raw( 'colour' ); ?>" />
 	</svg>
@@ -31,9 +31,6 @@ $colours = project_colour();
 				'</span>'
 			);
 		?>
-	</div>
-	<div class="project__carousel">
-		<?php get_template_part( 'template-parts/carousel' ); ?>
 	</div>
 	<footer class="project__footer">
 	</footer>

@@ -1,0 +1,25 @@
+$width: 900px;
+
+.carousel {
+  position: absolute;
+  width: $width;
+  overflow: hidden;
+  .carousel__container {
+    display: flex;
+    position: relative;
+    left: 0;
+    transition-property: left;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.5s;
+  }
+  .carousel__slide {
+    min-width: $width;
+    text-align: center;
+  }
+  .carousel__prev, .carousel__next {
+    &:hover {
+      cursor: pointer;
+      background-color: yellow;
+    }
+  }
+}
