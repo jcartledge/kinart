@@ -6,19 +6,4 @@
   .project__title {
     @include accessibility;
   }
-  .project__background {
-    width: 100%;
-    height: 600px;
-    position: absolute;
-    @include animate(inFromLeft);
-  }
-  .project__content {
-    padding: 1em;
-    padding-top: 0.5em;
-    @include animate(fadeIn);
-    @include breakpoint($sm) {
-      width: 70%;
-    }
-  }
-  .project__footer {}
 }
