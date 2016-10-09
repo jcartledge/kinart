@@ -15,6 +15,7 @@ $colour = project_colour();
 	</svg>
 	<div class="project-overlay__content">
 		<?php the_content(); ?>
+		<?php echo get_post_meta($post->ID, 'description', true); ?>
 		<?php
 		edit_post_link(
 			sprintf(
