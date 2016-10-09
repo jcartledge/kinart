@@ -13,10 +13,10 @@ on(document, 'DOMContentLoaded', _ => {
     const currentLabel = document.querySelector(currentSel);
     const container = document.querySelector(containerSel);
     const totalItems = slides.length;
-    const slideWidth = slides[0].offsetWidth;
     let currentItemIndex = 0;
 
     function updateCarousel(delta) {
+      const slideWidth = slides[0].offsetWidth;
       currentItemIndex = (totalItems + currentItemIndex + delta) % totalItems;
       currentLabel.innerHTML = currentItemIndex + 1;
       container.style.left = `${currentItemIndex * -slideWidth}px`;

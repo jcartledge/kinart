@@ -1,25 +1,62 @@
-$width: 900px;
+@import 'base/variables';
+@import 'mixins/responsive';
 
 .carousel {
+  $width-lg: $screen-lg-min / 4 * 3;
+  $height-lg: 600px;
+  $width-md: $screen-md-min / 4 * 3;
+  $height-md: 600px;
   position: absolute;
-  width: $width;
   overflow: hidden;
+  width: 100%;
+  @include breakpoint($md) {
+    width: $width-md;
+  }
+  @include breakpoint($lg) {
+    width: $width-lg;
+  }
   .carousel__container {
     display: flex;
-    position: relative;
-    left: 0;
-    transition-property: left;
-    transition-timing-function: ease-in-out;
-    transition-duration: 0.5s;
+    flex-direction: column;
+    @include breakpoint($md) {
+      flex-direction: row;
+      position: relative;
+      left: 0;
+      transition-property: left;
+      transition-timing-function: ease-in-out;
+      transition-duration: 0.5s;
+    }
   }
   .carousel__slide {
-    min-width: $width;
     text-align: center;
+    @include breakpoint($md) {
+      min-width: $width-md;
+    }
+    @include breakpoint($lg) {
+      min-width: $width-lg;
+    }
   }
-  .carousel__prev, .carousel__next {
-    &:hover {
-      cursor: pointer;
-      background-color: yellow;
+  .carousel__image {
+    text-align: center;
+    @include breakpoint($md) {
+      max-width: $width-md;
+      max-height: $height-md;
+    }
+    @include breakpoint($lg) {
+      max-width: $width-lg;
+      max-height: $height-lg;
+    }
+  }
+  .carousel__pagination {
+    display: none;
+    @include breakpoint($md) {
+      display: block;
+      .carousel__prev, .carousel__next {
+        &:hover {
+          cursor: pointer;
+          background-color: yellow;
+        }
+      }
     }
   }
 }
