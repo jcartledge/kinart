@@ -7,14 +7,21 @@ require_once dirname( __FILE__ ) . '/../inc/colours.inc.php';
 $colour = project_colour();
 ?>
 <div class="project-overlay">
+	<div class="project-overlay__intro project-overlay__content">
+		<?php the_content(); ?>
+	</div>
+	<div class="project-overlay__controls" style="color: <?php echo $colour; ?>">
+		<div class="project-overlay__show">More</div>
+		<div class="project-overlay__hide">Or less</div>
+	</div>
 	<svg class="project-overlay__triangle" version="1.1" xmlns="http://www.w3.org/2000/svg">
 		<polygon
 			points="0 0, 1200 0, 0 600"
 			stroke="none"
 			fill="<?php echo $colour; ?>" />
 	</svg>
-	<div class="project-overlay__content">
-		<?php the_content(); ?>
+	<?php get_template_part( 'template-parts/carousel' ); ?>
+	<div class="project-overlay__description project-overlay__content">
 		<?php echo get_post_meta($post->ID, 'description', true); ?>
 		<?php
 		edit_post_link(
@@ -27,9 +34,5 @@ $colour = project_colour();
 			'</span>'
 		);
 		?>
-	</div>
-	<div class="project-overlay__controls" style="color: <?php echo $colour; ?>">
-		<div class="project-overlay__show">More</div>
-		<div class="project-overlay__hide">Or less</div>
 	</div>
 </div>

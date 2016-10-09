@@ -9,7 +9,9 @@
   position: absolute;
   overflow: hidden;
   width: 100%;
+  z-index: -1;
   @include breakpoint($md) {
+    top: 0;
     width: $width-md;
   }
   @include breakpoint($lg) {
