@@ -1,0 +1,17 @@
+@import 'mixins/accessibility';
+
+body.page {
+  .entry-title {
+    @include accessibility;
+  }
+  .entry-content {
+    margin-top: 0;
+    margin-left: 20%;
+    :first-child {
+      margin-top: 0;
+    }
+  }
+  .entry-footer {
+    margin-left: 20%
+  }
+}

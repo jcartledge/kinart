@@ -10,7 +10,7 @@ get_header(); ?>
 
 		<?php if ( have_posts() ) : ?>
 			<header class="page-header">
-				<h1 class="page-title category-title">&lsaquo; <?php single_cat_title(); ?></h1>
+				<h1 class="page-title category-title"><?php single_cat_title(); ?></h1>
 			</header>
 			<?php get_template_part( 'template-parts/project_list' );
 		endif; ?>

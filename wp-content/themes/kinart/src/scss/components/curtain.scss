@@ -11,6 +11,7 @@
   @include element(foreground) {
     width: 100%;
     height: 100%;
+    transition: background-color 1s;
     @include animate(inFromLeft);
   }
   @include element(background) {
@@ -19,6 +20,9 @@
     bottom: 0;
     z-index: 1;
     @include animate(inFromRight);
+    polygon {
+      transition: fill 1s;
+    }
   }
   @include modifier(open) {
     @include element(foreground) {

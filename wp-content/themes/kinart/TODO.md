@@ -1,0 +1,21 @@
+TODO:
+
+- [x] fix logo
+- [x] populate provided content
+- [x] project: navigate to first child when there are children
+- [ ] set up project template
+  - [x] show correct nav in sidebar
+    - [x] show correct category
+  - [x] layout sidebar and main correctly (responsive)
+  - [x] colour overlay for info
+    - [x] crop in container
+    - [x] only selected colors available for this... modify the content type
+  - [-] carousel for images
+    - [x] responsive carousel
+    - [ ] mobile/swipe interaction
+    - [ ] overlay show/hide
+      - [ ] responsive
+- [ ] set up page template
+- [ ] fix nav interaction
+- [ ] deploy to test environment
+- [ ] set up test user accounts
