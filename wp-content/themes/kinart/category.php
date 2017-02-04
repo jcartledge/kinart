@@ -18,4 +18,4 @@ get_header(); ?>
 		</main>
 	</div>
 
-<?php
+<?php get_sidebar();

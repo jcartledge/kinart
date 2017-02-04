@@ -1,25 +1,37 @@
-@import 'mixins/animations';
-
 .project-overlay {
+  @mixin out {
+    opacity: 0;
+    right: 120%;
+  }
+  @mixin in {
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.8s;
+    transition-property: opacity, right;
+    opacity: 1;
+    right: 0;
+  }
   position: absolute;
   width: 100%;
   &.is-out {
     .project-overlay__triangle {
-      @include animate(fadeOutToLeft);
+      @include out;
     }
     .project-overlay__description {
-      @include animate(fadeOut, relative);
+      position: relative;
+      @include out;
     }
     @include breakpoint($md) {
       .project-overlay__intro {
-        @include animate(fadeOut, relative);
+        position: relative;
+        @include out;
       }
     }
   }
   &__content {
     z-index: 2;
     padding: 0.5em 1em;
-    @include animate(fadeIn, relative);
+    position: relative;
+    @include in;
     @include breakpoint($sm) {
       width: 70%;
     }
@@ -35,7 +47,8 @@
     }
   }
   &__triangle {
-    @include animate(fadeInFromLeft);
+    position: absolute;
+    @include in;
     z-index: 1;
     width: 100%;
     height: 600px;
@@ -57,12 +70,12 @@
     }
   }
   &__show {
-    display: none;
     &:before {
       content: ' + ';
     }
   }
   &__hide {
+    display: none;
     &:before {
       content: ' – ';
     }

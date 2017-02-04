@@ -6,7 +6,7 @@
 require_once dirname( __FILE__ ) . '/../inc/colours.inc.php';
 $colour = project_colour();
 ?>
-<div class="project-overlay">
+<div class="project-overlay is-out">
 	<div class="project-overlay__intro project-overlay__content">
 		<?php the_content(); ?>
 	</div>

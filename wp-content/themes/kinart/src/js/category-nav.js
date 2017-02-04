@@ -6,8 +6,12 @@ on(document, 'DOMContentLoaded', _ => {
   if (categoryTitle) {
     const contentArea = document.querySelector('.content-area');
     const widgetArea = document.querySelector('.widget-area');
+    const sidebar = document.querySelector('.sidebar');
 
     on(categoryTitle, 'click', _ => {
+      if (!widgetArea) {
+        return;
+      }
       contentArea.classList.add('is-out');
       widgetArea.classList.add('is-in');
       once(widgetArea.querySelector('.current-menu-item'), 'click', e => {

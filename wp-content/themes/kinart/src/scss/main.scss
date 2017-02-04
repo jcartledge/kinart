@@ -7,9 +7,10 @@
 /**
  * Layouts
  */
-@import 'layouts/site';
-@import 'layouts/front';
 @import 'layouts/category';
+@import 'layouts/front';
+@import 'layouts/page';
+@import 'layouts/site';
 
 /**
  * Components (BEM blocks).
