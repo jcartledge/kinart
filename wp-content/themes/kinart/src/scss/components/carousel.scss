@@ -6,11 +6,13 @@
   $height-lg: 600px;
   $width-md: $screen-md-min / 4 * 3;
   $height-md: 600px;
+  padding: 0 2em;
   position: absolute;
   overflow: hidden;
   width: 100%;
   z-index: -1;
   @include breakpoint($md) {
+    padding: 0;
     top: 0;
     width: $width-md;
   }
@@ -31,7 +33,9 @@
   }
   &__slide {
     text-align: center;
+    padding-bottom: 1em;
     @include breakpoint($md) {
+      padding-bottom: 0;
       min-width: $width-md;
     }
     @include breakpoint($lg) {
