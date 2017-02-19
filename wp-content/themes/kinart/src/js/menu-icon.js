@@ -4,7 +4,10 @@ import once from 'once-event-listener';
 on(document, 'DOMContentLoaded', _ => {
   const menuIcon = document.querySelector('.menu-icon');
   const curtain = document.querySelector('.curtain');
-  on(menuIcon, 'click', _ => {
+  const openCurtain = event => {
+    if (event) {
+      event.preventDefault();
+    }
     menuIcon.classList.toggle('menu-icon--open');
     if (curtain) {
       let curtainClasses = curtain.classList;
@@ -15,5 +18,12 @@ on(document, 'DOMContentLoaded', _ => {
       }
       curtainClasses.toggle('curtain--open');
     }
-  });
+  };
+
+  if (curtain) {
+    on(menuIcon, 'click', openCurtain);
+  }
+  if (location.hash.toLowerCase() === '#shownav') {
+    openCurtain();
+  }
 });

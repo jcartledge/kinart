@@ -27,7 +27,7 @@
 
 	<header id="masthead" class="site-header" role="banner">
 
-		<p class="menu-icon"></p>
+		<?php get_template_part('template-parts/menu-icon'); ?>
 
 		<p class="site-branding">
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
