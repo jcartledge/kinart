@@ -7,8 +7,10 @@
     "prebuild:css": "node-sass --include-path=src/scss --source-map-embed src/scss/main.scss > style.css",
     "build:css": "postcss --use autoprefixer --autoprefixer.browsers 'last 2 versions' --use cssnano -o style.css style.css",
     "build:js": "browserify src/js/index.js -o bundle.js -t [ babelify --presets [ es2015 ] ]",
+    "build:js:dev": "browserify src/js/index.js -o bundle.js -t [ babelify --presets [ es2015 ] ] -d",
     "build": "npm run build:css && npm run build:js",
-    "build:watch": "watch 'npm run build' src/*"
+    "build:dev": "npm run build:css && npm run build:js:dev",
+    "dev": "watch 'npm run build:dev' src/*"
   },
   "author": "",
   "license": "ISC",
