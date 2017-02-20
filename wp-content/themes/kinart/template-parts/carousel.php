@@ -16,11 +16,11 @@ $slides = get_attached_media( 'image' );
 	</div>
 	<?php if ( count( $slides ) ) : ?>
 		<div class="carousel__pagination">
-			<span class="carousel__prev">&lsaquo;</span>
+			<span class="carousel__prev">&lt;</span>
 			<span class="carousel__current">1</span>
-			of
+			/
 			<span class="carousel__total"><?php echo count($slides); ?></span>
-			<span class="carousel__next">&rsaquo;</span>
+			<span class="carousel__next">&gt;</span>
 		</div>
 	<?php endif; ?>
 </div>

@@ -1,14 +1,9 @@
 .project-overlay {
   @mixin out {
-    opacity: 0;
-    right: 120%;
+    display: none;
   }
   @mixin in {
-    transition-timing-function: ease-in-out;
-    transition-duration: 0.8s;
-    transition-property: opacity, right;
-    opacity: 1;
-    right: 0;
+    display: block;
   }
   position: absolute;
   width: 100%;
@@ -29,8 +24,11 @@
   }
   &__content {
     z-index: 2;
-    padding: 0 2em;
+    margin: 1em;
     position: relative;
+    p {
+      margin: 0;
+    }
     @include in;
     @include breakpoint($sm) {
       width: 70%;
