@@ -57,8 +57,9 @@
   &__controls {
     text-transform: uppercase;
     letter-spacing: 0.3em;
-    padding: 0 2em 1em;
+    padding: 0 1em;
     @include breakpoint($md) {
+      padding: 0 2em 1em;
       top: 600px;
       position: absolute;
       right: 0;
