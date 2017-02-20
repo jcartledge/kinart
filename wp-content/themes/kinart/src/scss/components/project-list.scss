@@ -1,0 +1,11 @@
+.project-list {
+  a {
+    color: gray;
+    &:hover {
+      color: black;
+    }
+  }
+  .current_page_item a {
+    color: black;
+  }
+}
