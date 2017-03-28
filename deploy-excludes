@@ -1,5 +1,6 @@
 ; self
 deploy-excludes
+stage.sh
 
 ; dev files
 .beetbox
@@ -9,6 +10,7 @@ deploy-excludes
 .jshintignore
 .vagrant
 .vimrc
+node_modules
 package.json
 tags
 Vagrantfile
@@ -18,6 +20,9 @@ Vagrantfile
 
 ; backups
 _backups
+
+; config
+wp-config*.php
 
 ; uploads
 wp-content/uploads
