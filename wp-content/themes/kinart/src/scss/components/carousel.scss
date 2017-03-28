@@ -29,6 +29,9 @@
       flex-direction: row;
       position: relative;
       left: 0;
+      transition-property: left;
+      transition-timing-function: ease-in-out;
+      transition-duration: 0.5s;
     }
   }
   &__slide {
