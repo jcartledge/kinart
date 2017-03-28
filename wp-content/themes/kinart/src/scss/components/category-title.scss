@@ -1,7 +1,23 @@
 .category-title {
   @extend .menu__link;
+  &:before {
+    content: '';
+    padding-right: 0.9em;
+  }
 }
-a.category-title {
+
+.wf-active {
+  .category-title:before {
+    padding-right: 0.5em;
+    font-family: FontAwesome;
+    content: '\f104';
+  }
+}
+
+a.category-title,
+h1.category-title {
   display: block;
   margin: 0 1em 2em;
+  font-weight: 400;
+  color: black;
 }

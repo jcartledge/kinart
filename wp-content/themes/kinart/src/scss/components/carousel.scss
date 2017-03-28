@@ -6,11 +6,14 @@
   $height-lg: 600px;
   $width-md: $screen-md-min / 4 * 3;
   $height-md: 600px;
-  padding: 0 2em;
+  padding: 0 1em;
   position: absolute;
   overflow: hidden;
   width: 100%;
   z-index: -1;
+  @include breakpoint($sm) {
+    padding: 0 2em;
+  }
   @include breakpoint($md) {
     padding: 0;
     top: 0;
@@ -26,9 +29,6 @@
       flex-direction: row;
       position: relative;
       left: 0;
-      transition-property: left;
-      transition-timing-function: ease-in-out;
-      transition-duration: 0.5s;
     }
   }
   &__slide {
