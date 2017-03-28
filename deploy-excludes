@@ -1,0 +1,26 @@
+; self
+deploy-excludes
+
+; dev files
+.beetbox
+.git
+.gitignore
+.jscsrc
+.jshintignore
+.vagrant
+.vimrc
+package.json
+tags
+Vagrantfile
+*.log
+*.lock
+*.md
+
+; backups
+_backups
+
+; uploads
+wp-content/uploads
+
+; SCSS and JS source
+wp-content/themes/kinart/src
