@@ -1,9 +1,7 @@
 .category-title {
   @extend .menu__link;
 }
-
-p.category-title {
+a.category-title {
   display: block;
-  margin-top: 2em;
-  margin-bottom: 3em;
+  margin: 0 1em 2em;
 }

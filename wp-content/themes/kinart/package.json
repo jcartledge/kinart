@@ -10,7 +10,7 @@
     "build:js:dev": "browserify src/js/index.js -o bundle.js -t [ babelify --presets [ es2015 ] ] -d",
     "build": "npm run build:css && npm run build:js",
     "build:dev": "npm run build:css && npm run build:js:dev",
-    "dev": "watch 'npm run build:dev' src/*"
+    "start": "watch 'npm run build:dev' src/*"
   },
   "author": "",
   "license": "ISC",
@@ -26,5 +26,6 @@
     "once-event-listener": "^1.0.0",
     "postcss-cli": "^2.5.2",
     "watch": "^0.18.0"
-  }
+  },
+  "dependencies": {}
 }
