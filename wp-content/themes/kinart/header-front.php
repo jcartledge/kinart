@@ -16,26 +16,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="https://use.fontawesome.com/3118b7244f.js"></script>
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-
 <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
-<?php get_template_part('template-parts/curtain'); ?>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'kinart' ); ?></a>
-
+	<?php get_template_part('template-parts/curtain'); ?>
 	<header id="masthead" class="site-header" role="banner">
-
 		<?php get_template_part('template-parts/menu-icon'); ?>
-
 		<p class="site-branding">
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 				<span class="site-branding__name"><?php bloginfo( 'name' ); ?></span>
 				<img class="site-branding__logo" src="<?php bloginfo('template_url'); ?>/logo.png">
 			</a>
 		</p><!-- .site-branding -->
-
 	</header><!-- #masthead -->
-
-	<div id="content" class="site-content">
+	<div id="page" class="site">
+		<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'kinart' ); ?></a>
+		<div id="content" class="site-content">
