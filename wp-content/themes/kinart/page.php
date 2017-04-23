@@ -4,8 +4,10 @@
  */
 
 get_header();
-get_sidebar();
 ?>
+	<aside id="secondary" class="widget-area" role="complementary">
+		<a href="/#shownav" class="category-title"><?php the_title(); ?></a>
+	</aside>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
@@ -22,5 +24,4 @@ get_sidebar();
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();
