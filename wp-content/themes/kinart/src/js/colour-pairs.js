@@ -8,7 +8,7 @@ const bgSelector = '.curtain__background polygon';
 const bgAttr = 'fill';
 const interval = 5000;
 
-function insertAfter(newNode, referenceNode) {
+function insertAfter (newNode, referenceNode) {
 	referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
 }
 
@@ -30,7 +30,7 @@ on(document, 'DOMContentLoaded', _ => {
 				});
 			}
 			window.setTimeout(_ => { update(nextIndex); }, interval);
-		}
+		};
 		window.setTimeout(update, interval);
 	}
 });
