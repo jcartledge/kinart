@@ -4,7 +4,7 @@
   /**
    * Responsive layout, anchored left.
    */
-  margin: 0 0 0 1em;
+  margin: 0;
   .sidebar {
     display: none;
   }
@@ -12,6 +12,7 @@
     max-width: $screen-sm-min;
   }
   @include breakpoint($md) {
+    margin: 0 0 0 1em;
     max-width: $screen-md-min;
     .sidebar {
       display: block;
