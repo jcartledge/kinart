@@ -1,5 +1,6 @@
 import on from 'event-listener';
 import once from 'once-event-listener';
+import 'nodelist-foreach-polyfill';
 
 function getCurtains () {
   return document.querySelectorAll('.curtain');
