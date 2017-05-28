@@ -3,16 +3,18 @@ Contributors: joshuadnelson
 Donate link: https://joshuadnelson.com/donate/
 Tags: remove blog, disable blog, disable settings, disable blogging, disable feeds, posts, feeds
 Requires at least: 3.1.0
-Tested up to: 4.5.3
-Stable tag: 0.4.2
+Tested up to: 4.7.2
+Stable tag: 0.4.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-A plugin to disable the blog functionality of WordPress (by hiding, removing, and redirecting).
+Turn WordPress into a blog-free CMS: disable the blog!
 
 == Description ==
 
-This plugin to disables the blog functionality of WordPress, mostly by hiding admin pages and settings and redirecting pages on both the front-end and admin side. This can be useful when you want a WordPress site to remain static and hide blog-related elements from admin users to avoid confusion.
+Disable all aspects of the "blog" to run a static, page-based website. Support for custom post types, custom taxonomies, and comments.
+
+It's all done in a way to be as unobtrusive as possible, mostly by hiding admin pages and settings and redirecting pages on both the front-end and admin side. The plugin also supports custom post types and custom taxonomies.
 
 **Important**: If Settings > Reading > "Front Page Displays" is not set to show on a page, then this plugin will update it to that option, but **you still need to select a page to act as the front page**. Not doing so will mean that your post page can still be visible on the front-end of the site.
 
@@ -20,14 +22,14 @@ This plugin to disables the blog functionality of WordPress, mostly by hiding ad
 
 **Categories & Tags**: These are hidden and redirected, unless they are supported by a custom post type.
 
-**Custom Post Types**: For the most part this plugin shouldn't bother any custom post types. If you are using a custom post type that supports the built-in `category` and/or `post_tag` taxonomies, they will be visible and accessible through that post type.
+**Custom Post Types**: For the most part this plugin shouldn't bother any custom post types. If you are using a custom post type that supports the built-in `category` and/or `post_tag` taxonomies, they will be visible and accessible for the custom post type.
 
 **Database**: This plugin will not delete anything in your database. If you don't want your posts, comments, categories, or tags, delete them prior to activation (or deactivate this plugin, delete them, and re-active). The only exception to the database modifications is related to the way your site displays it's front page, as mentioned above.
 
 **Support**: This plugin is maintain for free but **Please reach out** and I will assist you as soon as possible. You can visit the [support forums](https://pippinsplugins.com) or the [issue](https://github.com/joshuadavidnelson/disable-blog/issues) section of the [GitHub repository](https://github.com/joshuadavidnelson/disable-blog).
 
 = View on GitHub & Contribute =
-[View this plugin on GitHub](https://github.com/joshuadavidnelson/disable-blog) to see a comprehensive list of this plugin's functionality and the To-Do list of items yet to be included, as well as log any issues (or visit the WP support forums linked above).
+[View the plugin on GitHub](https://github.com/joshuadavidnelson/disable-blog) to see a comprehensive list of this plugin's functionality and the To-Do list of items yet to be included, as well as log any issues (or visit the WP support forums linked above).
 
 Please feel free to contribute!
 
@@ -37,9 +39,8 @@ This section describes how to install the plugin and get it working.
 
 e.g.
 
-1. Upload `plugin-name.php` to the `/wp-content/plugins/` directory
-1. Activate the plugin through the 'Plugins' menu in WordPress
-1. Place `<?php do_action('plugin_name_hook'); ?>` in your templates
+1. Unzip the plugin folder and upload it to the `/wp-content/plugins/` directory
+2. Activate the plugin through the 'Plugins' menu in WordPress
 
 == Frequently Asked Questions ==
 
@@ -48,6 +49,11 @@ e.g.
 2. **I want to delete my posts and comments.** Deactivate the plugin, delete your posts (which will delete related comments), and delete any tags or categories you might want to remove as well. Then reactivate the plugin to hide everything.
 
 == Changelog ==
+
+= 0.4.3 =
+* Fix fatal error conflict with WooCommerce versions older than 2.6.3 (props to @Mahjouba91 for the heads up), no returns an array of comments in the filter for those older WooCommerce versions.
+* Add de/activation hooks to clear comment caches
+* Cleanup comment count functions.
 
 = 0.4.2 =
 * Disable the REST API for 'post' post type. Props to @shawnhooper.
@@ -106,6 +112,10 @@ A bunch of stuff:
 * Hide other post-related reading options, except Search Engine Visibility
 
 == Upgrade Notice ==
+
+= 0.4.3 =
+* Fixes compatibility issues with WooCommerce (versions 2.6.3 and older)
+* Clean up comment functions and clear comment caches on activation/deactivation
 
 = 0.4.2 =
 * Disable the REST API for 'post' post type. Props to @shawnhooper.
