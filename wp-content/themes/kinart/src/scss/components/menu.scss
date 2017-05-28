@@ -30,12 +30,3 @@
     padding-left: 1em;
   }
 }
-
-
-// Not BEM, but OK.
-// Targets the menu on the homepage. Allow colours to transition in before
-// displaying the nav.
-.home .widget_nav_menu {
-  @include animate(fadeIn);
-  animation-duration: 1.5s;
-}

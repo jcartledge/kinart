@@ -16,6 +16,7 @@ function hide (element) {
 
 on(document, 'DOMContentLoaded', _ => {
   const menuIcon = document.querySelector('.menu-icon');
+  const menu = document.querySelector('.menu');
   const openCurtain = event => {
     const curtains = getCurtains();
     if (event) {
@@ -26,9 +27,10 @@ on(document, 'DOMContentLoaded', _ => {
       show(curtain);
       let curtainClasses = curtain.classList;
       if (curtainClasses.contains('curtain--open')) {
-        curtainClasses.remove('curtain--behind');
-      } else {
-        once(curtain, 'animationend', _ => curtainClasses.add('curtain--behind'));
+        hide(menu);
+      }
+      else {
+        show(menu);
       }
       curtainClasses.toggle('curtain--open');
     });
@@ -36,9 +38,11 @@ on(document, 'DOMContentLoaded', _ => {
 
   if (getCurtains().length) {
     on(menuIcon, 'click', openCurtain);
+    hide(menu);
   }
   if (window.location.hash.toLowerCase() === '#shownav') {
     openCurtain();
     getCurtains().forEach(hide);
+    show(menu);
   }
 });
