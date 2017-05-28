@@ -1,11 +1,15 @@
 @import 'mixins/accessibility';
+@import 'mixins/responsive';
 
 body.page {
   .entry-title {
     @include accessibility;
   }
   .entry-content {
-    margin: 0 40% 0 20%;
+    margin: 0 10%;
+    @include breakpoint($sm) {
+      margin: 0 50% 0 20%;
+    }
     :first-child {
       margin-top: 0;
     }
