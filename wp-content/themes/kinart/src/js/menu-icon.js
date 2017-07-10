@@ -28,9 +28,11 @@ on(document, 'DOMContentLoaded', _ => {
       let curtainClasses = curtain.classList;
       if (curtainClasses.contains('curtain--open')) {
         hide(menu);
+        show(curtain);
       }
       else {
         show(menu);
+        curtain.addEventListener('animationend', () => hide(curtain), {once: true});
       }
       curtainClasses.toggle('curtain--open');
     });
