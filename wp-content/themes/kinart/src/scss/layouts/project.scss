@@ -1,0 +1,10 @@
+@import 'mixins/responsive';
+
+body.single-project {
+  .project-list {
+    display: none;
+    @include breakpoint($md) {
+      display: block;
+    }
+  }
+}
