@@ -1,6 +1,11 @@
+@import 'mixins/responsive';
+
 .site-branding {
   float: left;
-  margin: 2em 1em;
+  margin: 2em 0;
+  @include breakpoint($md) {
+    margin: 2em 1em;
+  }
   &__name {
     display: none;
   }
