@@ -24,8 +24,5 @@ _backups
 ; config
 wp-config*.php
 
-; uploads
-wp-content/uploads
-
 ; SCSS and JS source
 wp-content/themes/kinart/src
