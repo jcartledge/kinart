@@ -10,7 +10,6 @@
   position: absolute;
   overflow: hidden;
   width: 100%;
-  z-index: -1;
   @include breakpoint($sm) {
     padding: 0 2em;
   }
