@@ -3,14 +3,14 @@
  * @package kinart
  */
 
-$slides = get_attached_media( 'image' );
+$slides = get_post_meta( $post->ID, 'image', false );
 
 ?>
 <div class="carousel">
 	<div class="carousel__container">
 		<?php foreach ( $slides as $slide ) : ?>
 			<div class="carousel__slide">
-				<?php echo wp_get_attachment_image( $slide->ID, [ 900, 600 ], false, ['class' => 'carousel__image'] ); ?>
+				<?php echo wp_get_attachment_image( $slide['ID'], [ 900, 600 ], false, ['class' => 'carousel__image'] ); ?>
 			</div>
 		<?php endforeach; ?>
 	</div>
