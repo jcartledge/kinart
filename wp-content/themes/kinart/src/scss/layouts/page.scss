@@ -6,7 +6,7 @@ body.page {
     @include accessibility;
   }
   .entry-content {
-    margin: 0 10%;
+    margin: 0 1em;
     @include breakpoint($sm) {
       margin: 0 50% 0 20%;
     }
