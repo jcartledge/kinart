@@ -1,4 +1,4 @@
-<?php
+ <?php
 /**
  * @package kinart
  */
@@ -14,7 +14,25 @@ $colour = project_colour();
 		<div class="project-overlay__show">More</div>
 		<div class="project-overlay__hide">Or less</div>
 	</div>
-	<svg class="project-overlay__triangle" version="1.1" xmlns="http://www.w3.org/2000/svg">
+	<svg class="project-overlay__triangle project-overlay__triangle--xs" version="1.1" xmlns="http://www.w3.org/2000/svg">
+		<polygon
+			points="0 0, 1200 0, 0 200"
+			stroke="none"
+			fill="<?php echo $colour; ?>" />
+	</svg>
+	<svg class="project-overlay__triangle project-overlay__triangle--sm" version="1.1" xmlns="http://www.w3.org/2000/svg">
+		<polygon
+			points="0 0, 1200 0, 0 347"
+			stroke="none"
+			fill="<?php echo $colour; ?>" />
+	</svg>
+	<svg class="project-overlay__triangle project-overlay__triangle--md" version="1.1" xmlns="http://www.w3.org/2000/svg">
+		<polygon
+			points="0 0, 1200 0, 0 496"
+			stroke="none"
+			fill="<?php echo $colour; ?>" />
+	</svg>
+	<svg class="project-overlay__triangle project-overlay__triangle--lg" version="1.1" xmlns="http://www.w3.org/2000/svg">
 		<polygon
 			points="0 0, 1200 0, 0 600"
 			stroke="none"
