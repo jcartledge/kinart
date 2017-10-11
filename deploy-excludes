@@ -26,3 +26,6 @@ wp-config*.php
 
 ; SCSS and JS source
 wp-content/themes/kinart/src
+
+; uploads
+wp-content/uploads
